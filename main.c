@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-/* #include <math.h> */
 
 #define MAX_NAME_LENGTH 50
 #define	MAX_PASSWORD_LENGTH 10
@@ -21,13 +20,8 @@ size_t findLongestCharacterLength(const char *string[], size_t count) {
 	return maxLength;
 }
 
-int main(void)
+int main()
 {
-	/*
-	 * idxT - idx type,
-	 * idxV - idx version,
-	 * idxM - idx mode
-	 * */
 
 	char name[MAX_NAME_LENGTH];
 	char password[MAX_PASSWORD_LENGTH];
