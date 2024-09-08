@@ -25,10 +25,6 @@ int main()
 
 	char name[MAX_NAME_LENGTH];
 	char password[MAX_PASSWORD_LENGTH];
-	
-	const char *idxT[] = {"32b", "64b", "128b", "256b"};
-	const char idxV[] = "v1.0";
-	const char *idxM[] = {"User", "Root"};
 
 	size_t maxLength = findLongestCharacterLength(idxT, sizeof(idxT) / sizeof(idxT[0]));
 
