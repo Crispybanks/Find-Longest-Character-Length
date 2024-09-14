@@ -1,35 +1,29 @@
 #include <stdio.h>
 #include <string.h>
 
-#define MAX_NAME_LENGTH 50
-#define	MAX_PASSWORD_LENGTH 10
+int find_longest_char_length(const char *string[], int count)
+{
+    int max_length = 0;
+    int longest_index = 0;
 
-size_t findLongestCharacterLength(const char *string[], size_t count) {
-	size_t maxLength = 0;
-	size_t longestIndex = 0;
+    for (size_t i = 0; i < count; i++) {
+        int length = strlen(string[i]);
 
-	for (size_t i = 0; i < count; ++i) {
-		size_t length = strlen(string[i]);
-
-		if (length > maxLength) {
-			maxLength = length;
-			longestIndex = i;
-		}
-	}
-
-	return maxLength;
+        if (length > max_length) {
+            max_length = length;
+            longest_index = i;
+        }
+    }
+    return max_length;
 }
 
 int main()
 {
-	char name[MAX_NAME_LENGTH];
-	char password[MAX_PASSWORD_LENGTH];
+    const char *names[] = {"Luca", "Noah", "Theodore", "Remi", "Harper", "Avery", "Charlotte"};
 
-	size_t maxLength = findLongestCharacterLength(idxT, sizeof(idxT) / sizeof(idxT[0]));
+    int max_length = find_longest_char_length(names, sizeof(names) / sizeof(names[0]));
+    printf("The length of the longest name is: %d\n", max_length);
 
-	maxLength++;
-
-	printf("Maximum length: %zu\n", maxLength);	
-
-	return 0;
+    return 0;
 }
+
