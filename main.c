@@ -22,7 +22,6 @@ size_t findLongestCharacterLength(const char *string[], size_t count) {
 
 int main()
 {
-
 	char name[MAX_NAME_LENGTH];
 	char password[MAX_PASSWORD_LENGTH];
 
